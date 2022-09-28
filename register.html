@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sirfitect registration book</h2>
+<input type = "text" id = "name">
+<input type = "text" id = "position">
+<button>register</button>
+<p id = 'demo'></p>
+
+
+
+<script>
+const name = document.querySelector("#name");
+const postion = document.querySelector("#position");
+const btn = document.querySelector("button");
+
+
+const employee = new Map();
+
+//function to add to map
+function addToMap(){
+    let nameValue = name.value;
+    let postionValue = postion.value;
+  	employee.set(nameValue, postionValue);
+    
+    let text = '';
+  employee.forEach(function (value, key) {
+    	text += key + " : " + value + "<br>";
+    });
+    
+   
+    
+    document.getElementById('demo').innerHTML = text;
+  }
+ btn.addEventListener('click', addToMap);
+//
+  
+
+
+	
+    
+    
+    
+    
+</script>
+
+</body>
+</html>
